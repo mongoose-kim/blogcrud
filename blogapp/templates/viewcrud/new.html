@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf=8">
+        <title>씨알유디연습</title>
+    </head>
+    <body>
+        <form method='POST'>
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <input type="submit" value="제출">
+        </form>
+    </body>
+</html>
