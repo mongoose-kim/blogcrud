@@ -39,7 +39,7 @@ def update(request, pk):
     blog = get_object_or_404(Blog, pk = pk)
 
     form = NewBlog(request.POST, instance=blog)
-    if form.is_valid:
+    if form.is_valid():
         form.save()
         return redirect('home')
     
@@ -48,6 +48,6 @@ def update(request, pk):
 def delete(request, pk):
     blog = get_object_or_404(Blog, pk = pk)
     blog.delete()
-    return redirect
+    return redirect('home')
 
     
